@@ -30,17 +30,41 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-      body: ListView.builder(
-        itemCount: controller.transactions.length,
-        itemBuilder: (_, index) {
-          Transaction transaction = controller.transactions[index];
-          return ListTile(
-            leading: Icon(transaction.isDeposit ? Icons.add : Icons.remove),
-            title: Text(transaction.isDeposit ? "Deposito" : "Saque"),
-            subtitle: Text(transaction.date),
-            trailing: Text(transaction.value.toStringAsFixed(2)),
-          );
-        },
+      body: Column(
+        children: [
+          Container(
+            alignment: Alignment.centerLeft,
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            height: 45,
+            width: double.infinity,
+            color: Colors.grey[200],
+            child: Text(
+              "EXTRATO",
+              style: TextStyle(fontWeight: FontWeight.w500),
+            ),
+          ),
+          Expanded(
+            child: ListView.builder(
+              itemCount: controller.transactions.length,
+              itemBuilder: (_, index) {
+                Transaction transaction = controller.transactions[index];
+                return ListTile(
+                  leading:
+                      Icon(transaction.isDeposit ? Icons.add : Icons.remove),
+                  title: Text(
+                    transaction.isDeposit ? "Deposito" : "Saque",
+                    style: TextStyle(fontWeight: FontWeight.w500),
+                  ),
+                  subtitle: Text(transaction.date),
+                  trailing: Text(
+                    transaction.value.toStringAsFixed(2),
+                    style: TextStyle(fontWeight: FontWeight.w500),
+                  ),
+                );
+              },
+            ),
+          ),
+        ],
       ),
       bottomNavigationBar: SizedBox(
         height: 45,
