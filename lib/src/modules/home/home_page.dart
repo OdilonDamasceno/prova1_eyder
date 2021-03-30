@@ -73,7 +73,7 @@ class _HomePageState extends State<HomePage> {
           children: [
             Expanded(
               child: ActionBankingButton(
-                color: Colors.red[400],
+                color: Colors.green[400],
                 onPressed: () {
                   setState(() {
                     controller.addTransaction(true);
@@ -88,7 +88,7 @@ class _HomePageState extends State<HomePage> {
             ),
             Expanded(
               child: ActionBankingButton(
-                color: Colors.green[400],
+                color: Colors.red[400],
                 onPressed: () {
                   setState(() {
                     controller.addTransaction(false);
