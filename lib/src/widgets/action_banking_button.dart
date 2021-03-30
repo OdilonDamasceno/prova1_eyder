@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
 
+/// Custom Buttom
 class ActionBankingButton extends StatelessWidget {
+  /// Cor do butão
   final Color color;
+
+  /// Quando o butão for clicado
   final void Function() onPressed;
+
+  /// Icone ao lado do texto
   final Icon icon;
+
+  /// Texto ao lado do icone
   final String text;
   const ActionBankingButton({
     Key key,
