@@ -17,4 +17,4 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Screenshots
 
-<img title="a title" alt="Alt text" src="./flutter_01.png" height=450>
+<img title="a title" alt="Alt text" src="./flutter_02.png" height=450>
