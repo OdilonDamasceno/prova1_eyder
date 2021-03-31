@@ -10,12 +10,20 @@ class Transaction {
     this._value = value;
   }
 
-  /// Data da transação
-  String get date => "${_date.day}/${_date.month}/${_date.year}";
+  /// Data da transação formatada como `XX/XX/XXXX`
+  String get date => _formatDate();
 
   /// Valor da transação
   double get value => _value;
 
   /// Variavel para detectar se é um deposito
   bool get isDeposit => _isDeposit;
+
+  /// Usado para formatar a data da transação
+  String _formatDate() {
+    String _day = _date.day.toString().padLeft(2, "0");
+    String _month = _date.month.toString().padLeft(2, "0");
+    String _year = _date.year.toString();
+    return "$_day/$_month/$_year";
+  }
 }
