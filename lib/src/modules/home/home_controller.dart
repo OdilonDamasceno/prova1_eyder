@@ -46,7 +46,7 @@ class HomeController {
   ///   transactions.forEach((transaction) {
   ///     // E incrementa ao saldo atual
   ///     balance += transaction.value;
-  ///     // Caso o valor da transação ele decrementa
+  ///     // Caso o valor da transação seja negativo ele decrementa
   ///     // Exemplo:
   ///     // balance += -100
   ///   });
